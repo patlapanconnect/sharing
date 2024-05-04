@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48CONNECT | Sharing</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/167672208?v=4" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MSP9M983');
+    </script>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="mousetrap.min.js" charset="utf-8"></script>
+    <script src="contactMe.js"></script>
+    <style>
+    body {
+        background: url('https://telegra.ph/file/bda73b8618917cef1205e.jpg') no-repeat center center fixed; /* Theatre Background Vectors by Vecteezy "https://www.vecteezy.com/free-vector/theatre-background" */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    /* Center the video and quality selector */
+    .centered {
+        width: 80%;
+        max-width: 100%;
+        margin-top: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #video {
+        width: 80%;
+        height: auto;
+        border: 10px solid #000;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        margin: 50px auto; margin-bottom: 20px;
+        display: block;
+        background: #000;
+    }
+    .controls-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px; /* Space between video and controls */
+        margin-bottom: 20px;
+    }
+    #quality-selector {
+        width: 100px;
+        height: 30px;
+        border: none;
+        padding: 5px;
+        background: #1c1c1c;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        display: block;
+        margin-top: 20px; /* Space between video and selector */
+        margin-bottom: 20px;
+    }
+    #contactMe {
+        font-size: 16px;
+        padding: 5px 10px;
+        margin-left: 10px; /* Space between quality selector and button */
+        background: #1c1c1c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSP9M983"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <div class="centered">
+      <video id="video" controls poster="https://static.showroom-live.com/image/room/cover/73f495d564945090f4af7338a42ce09ffa12d35fbfa8ce35c856220bcf96c5f3_m.png?v=1711114163"></video>
+      <script src="player.js"></script>
+      <div class="controls-wrapper">
+          <select id="quality-selector"></select>
+          <button id="contactMe" onclick="contactMeFunction()">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </button>
+      </div>
+    </div>
+</body>
+</html>
